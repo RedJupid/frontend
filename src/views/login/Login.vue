@@ -65,9 +65,22 @@
                 this.form.validateFields((err, values) => {
                     if (!err) {
                         let userName = this.form.getFieldValue('userName')
-                        console.log('Received values of form: ', values);
-                        localStorage.setItem("loginInfo",userName);
-                        this.$router.push({ path:'/'  })
+                        let password = this.form.getFieldValue('password')
+                        this.axios({
+                            url:'/login',
+                            method:'post',
+                            data: this.qs.stringify({
+                                username:userName,
+                                password:password
+                            })
+                        }).then(res=>{
+                            console.log(res.data)
+                        }, res=>{
+                            console.log(res.data)
+                        })
+                        // console.log('Received values of form: ', values);
+                        // localStorage.setItem("loginInfo",userName);
+                        // this.$router.push({ path:'/'  })
                     }
                 });
             },
