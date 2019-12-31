@@ -75,6 +75,12 @@
                             })
                         }).then(res=>{
                             console.log(res.data)
+                            if(res.data.code==200){{
+                                localStorage.setItem("loginInfo",userName);
+                                this.$router.push({ path:'/'  })
+                            }}else{
+                                alert(res.data.msg);
+                            }
                         }, res=>{
                             console.log(res.data)
                         })

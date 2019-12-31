@@ -1,5 +1,6 @@
 <template>
-  <a-layout id="components-layout-demo-custom-trigger">
+  <div style="height: 100%">
+  <a-layout id="components-layout-demo-custom-trigger" :style="{height:'100%'}">
     <a-layout-sider :trigger="null" collapsible v-model="collapsed" :style="{background:'#fff'}">
       <div class="logo">
         <img src="../../src/assets/logo.png" style="height:100%">
@@ -11,11 +12,10 @@
               :style="{ borderRight: 0}"
       >
         <a-sub-menu key="sub1">
-          <span slot="title"><a-icon type="user" />subnav 1</span>
-          <a-menu-item key="1"><router-link to="/about">About</router-link></a-menu-item>
-          <a-menu-item key="2">option2</a-menu-item>
-          <a-menu-item key="3">option3</a-menu-item>
-          <a-menu-item key="4">option4</a-menu-item>
+          <span slot="title"><a-icon type="user" />系统管理</span>
+          <a-menu-item key="1"><router-link to="/user">用户管理</router-link></a-menu-item>
+          <a-menu-item key="2"><router-link to="/role">角色管理</router-link></a-menu-item>
+          <a-menu-item key="3"><router-link to="/menu">菜单管理</router-link></a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="sub2">
           <span slot="title"><a-icon type="laptop" />subnav 2</span>
@@ -34,7 +34,7 @@
       </a-menu>
     </a-layout-sider>
     <a-layout>
-      <a-layout-header style="background: #fff; padding: 0">
+      <a-layout-header style="background: #fff; padding: 0; height: 50px; line-height: 50px">
         <a-icon
                 class="trigger"
                 :type="collapsed ? 'menu-unfold' : 'menu-fold'"
@@ -42,16 +42,17 @@
         />
       </a-layout-header>
       <a-layout-content
-              :style="{ margin: '5px 5px 0 5px', padding: '24px', background: '#fff', minHeight:'800px'}"
+              :style="{ margin: '5px', padding: '5px', background: '#fff'}"
       >
-        Content
         <router-view/>
       </a-layout-content>
-      <a-layout-footer style="text-align: center; padding:5px 5px">
-        Ant Design ©2018 Created by Ant UED
-      </a-layout-footer>
+
+<!--      <a-layout-footer style="text-align: center; padding:5px 5px">-->
+<!--        Ant Design ©2018 Created by Ant UED-->
+<!--      </a-layout-footer>-->
     </a-layout>
   </a-layout>
+  </div>
 </template>
 <script>
   export default {
@@ -65,7 +66,7 @@
 <style>
   #components-layout-demo-custom-trigger .trigger {
     font-size: 18px;
-    line-height: 64px;
+    line-height: 50px;
     padding: 0 24px;
     cursor: pointer;
     transition: color 0.3s;
@@ -80,4 +81,6 @@
     background: rgba(255, 255, 255, 0.2);
     margin: 16px;
   }
+
+
 </style>

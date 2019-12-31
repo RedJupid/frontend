@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 const Login = () => import('../views/login/Login.vue')
 const About = () => import('../views/About.vue')
+const User = () => import('../views/system/User.vue')
+const Role = () => import('../views/system/Role.vue')
+const Menu = () => import('../views/system/Menu.vue')
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,9 +15,17 @@ const routes = [
     component: Home,
     children: [
       {
-        path: '/about',
-        name: 'about',
-        component: About
+        path: '/user',
+        name: 'user',
+        component: User
+      },{
+        path: '/role',
+        name: 'role',
+        component: Role
+      },{
+        path: '/menu',
+        name: 'menu',
+        component: Menu
       }
     ]
   },
