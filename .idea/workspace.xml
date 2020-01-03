@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b48008c7-5813-41de-a259-47a776fdf1d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c9457560c53d9902c8ee85a8b8133469.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c9457560c53d9902c8ee85a8b8133469.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/f6f11a978b1888fcf34a9023c5671f8a.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/f6f11a978b1888fcf34a9023c5671f8a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6a2663e3a3f6b510d1a5a8df1f337eac.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6a2663e3a3f6b510d1a5a8df1f337eac.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/70a9bbbd8de5fd98834a6a6533091549.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/70a9bbbd8de5fd98834a6a6533091549.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d394c5f9946bd8f72591153a47c17c53.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d394c5f9946bd8f72591153a47c17c53.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/fc1d6da37cfcac773ce4c28148dd2d54.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/fc1d6da37cfcac773ce4c28148dd2d54.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/system/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/system/User.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/system" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\xd\webstormProject\demo\node_modules\prettier" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,7 +75,8 @@
       <workItem from="1577074991415" duration="1330000" />
       <workItem from="1577704349392" duration="5319000" />
       <workItem from="1577765323457" duration="12896000" />
-      <workItem from="1577854615271" duration="9121000" />
+      <workItem from="1577854615271" duration="9288000" />
+      <workItem from="1578024389070" duration="6758000" />
     </task>
     <task id="LOCAL-00001" summary="主页">
       <created>1576769839633</created>
@@ -91,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577780653757</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="分页">
+      <created>1577863952172</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577863952172</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,13 +129,14 @@
     <MESSAGE value="主页" />
     <MESSAGE value="登录" />
     <MESSAGE value="用户管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户管理" />
+    <MESSAGE value="分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="分页" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="381" y="7" key="CommitChangelistDialog2" timestamp="1577780436657">
+    <state x="381" y="7" key="CommitChangelistDialog2" timestamp="1577863949480">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577780436657" />
+    <state x="381" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577863949480" />
     <state x="571" y="173" key="FileChooserDialogImpl" timestamp="1577075033366">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -129,9 +145,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="653" y="303" width="272" height="219" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1576769746359" />
-    <state x="390" y="132" key="Vcs.Push.Dialog.v2" timestamp="1577780712325">
+    <state x="390" y="132" key="Vcs.Push.Dialog.v2" timestamp="1577863978511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="390" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577780712325" />
+    <state x="390" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577863978511" />
   </component>
 </project>

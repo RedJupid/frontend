@@ -4,15 +4,13 @@
     <a-row>
       <a-col :span="20">
         <a-form layout="inline">
-          <a-form-item
-                label="姓名"
-          >
-            <a-input/>
+          <a-form-item label="姓名">
+            <a-input v-model="page.username"/>
           </a-form-item>
         </a-form>
       </a-col>
       <a-col :span="4">
-        <a-button>
+        <a-button @click="getByPage(1)">
           <a-icon type="search" />
         </a-button>
       </a-col>
@@ -20,7 +18,7 @@
 
 
 
-  <a-table :columns="columns" :dataSource="data" :pagination="false">
+  <a-table :columns="columns" :dataSource="records" :pagination="false" :rowKey="record=>record.id">
     <span slot="status" slot-scope="status">
       <a-tag
               :color="status==='可用' ? 'green' : 'red'"
@@ -36,7 +34,7 @@
     </span>
   </a-table>
     <div style="margin-top: 10px; float: right">
-      <a-pagination showQuickJumper :defaultCurrent="2" :total="100" @change="onChange" :showTotal="total => `Total ${total} items`" />
+      <a-pagination showQuickJumper :pageSize="page.size" :defaultCurrent="1" :total="page.total" @change="getByPage" :showTotal="total => `Total ${total} items`" />
     </div>
   </div>
 </template>
@@ -74,26 +72,46 @@
       scopedSlots: { customRender: 'action' },
     },
   ];
-  const data = [];
+  const records = [];
+  const page = {
+    current:1,
+    size:3,
+    total:0,
+    username: ""
+  };
 
   export default {
     data() {
       return {
-        data,
+        records,
         columns,
         current:1,
+        page
       };
     },
     methods:{
-      onChange(pageNumber) {
-        console.log('Page: ', pageNumber);
+      // onChange(current) {
+      //   this.getByPage(current, this.page.size, this.page.username);
+      // },
+      getByPage(current){
+        this.axios.get('/sys/user/getByPage', {
+          params: {
+            current: current,
+            size: this.page.size,
+            username: this.page.username
+          }
+        }).then(res=>{
+          let data = res.data.data;
+          console.log(data);
+          this.records = data.records;
+          this.page.total = data.total;
+          this.page.current = data.current;
+          // this.data = data;
+        })
       }
     },
     created() {
-      this.axios.get('/sys/user/list').then(res=>{
-        console.log(res.data);
-        this.data = res.data;
-      })
+      this.getByPage(1);
     }
   };
 </script>
