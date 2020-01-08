@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b48008c7-5813-41de-a259-47a776fdf1d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4a89a746ea4eecc24f29e3a547ae986b.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4a89a746ea4eecc24f29e3a547ae986b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6741bc5b91cef79d8e0b52745844de74.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6741bc5b91cef79d8e0b52745844de74.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/91a3fff769ab96f189ba15fe5a8f3846.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/91a3fff769ab96f189ba15fe5a8f3846.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/system/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/system/Menu.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +75,8 @@
       <workItem from="1577854615271" duration="9288000" />
       <workItem from="1578024389070" duration="10437000" />
       <workItem from="1578051209157" duration="2670000" />
-      <workItem from="1578205217217" duration="8672000" />
+      <workItem from="1578205217217" duration="9168000" />
+      <workItem from="1578478912552" duration="8395000" />
     </task>
     <task id="LOCAL-00001" summary="主页">
       <created>1576769839633</created>
@@ -116,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578051998443</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="菜单管理">
+      <created>1578214205441</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578214205442</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,10 +155,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="菜单管理" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="381" y="7" key="CommitChangelistDialog2" timestamp="1578051991211">
+    <state x="381" y="7" key="CommitChangelistDialog2" timestamp="1578214200417">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578051991211" />
+    <state x="381" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578214200417" />
     <state x="156" y="66" key="DiffContextDialog" timestamp="1578032320780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -160,9 +171,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="653" y="303" width="272" height="219" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1576769746359" />
-    <state x="390" y="132" key="Vcs.Push.Dialog.v2" timestamp="1578052013357">
+    <state x="390" y="132" key="Vcs.Push.Dialog.v2" timestamp="1578214243713">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="390" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578052013357" />
+    <state x="390" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578214243713" />
   </component>
 </project>
