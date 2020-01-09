@@ -2,7 +2,7 @@
   <div>
     <a-row>
       <a-col :span="12">
-        <a-button><a-icon type="plus" /></a-button>
+        <a-button @click="onSelectAdd"><a-icon type="plus" /></a-button>
         <a-button><a-icon type="sync" /></a-button>
         <a-tree
                 checkable
@@ -17,9 +17,10 @@
         />
       </a-col>
       <a-col :span="12">
+        {{selectPage.name}}
         <a-form :form="form">
           <a-form-item label="id" :label-col="formItemLayout.labelCol" :wrapper-col="formItemLayout.wrapperCol">
-            <a-input v-decorator="['id']"/>
+            <a-input v-decorator="['id']" :disabled="true" />
           </a-form-item>
           <a-form-item label="上级id" :label-col="formItemLayout.labelCol" :wrapper-col="formItemLayout.wrapperCol">
             <a-input v-decorator="['parentId']"/>
@@ -46,7 +47,8 @@
             <a-input v-decorator="['orderNum']"/>
           </a-form-item>
           <a-form-item>
-            <a-button type="primary" @click="updateMenu">更新</a-button>
+            <a-button type="primary" @click="updateMenu" v-show="selectPage.update">更新</a-button>
+            <a-button type="primary" @click="addMenu" v-show="selectPage.add">添加</a-button>
           </a-form-item>
         </a-form>
       </a-col>
@@ -68,6 +70,11 @@
     },
     data() {
       return {
+        selectPage:{
+          name:"编辑菜单",
+          add:false,
+          update:true
+        },
         expandedKeys: [1],
         autoExpandParent: true,
         checkedKeys: [],
@@ -112,10 +119,28 @@
         });
       },
       onSelect(selectedKeys, info) {
+        this.selectPage.name = "编辑菜单"
+        this.selectPage.update = true;
+        this.selectPage.add = false;
         this.menu = info.selectedNodes[0].data.props;
         console.log(this.menu);
         this.setMenu(this.menu);
         this.selectedKeys = selectedKeys;
+      },
+      onSelectAdd(){
+        this.selectPage.update = false;
+        this.selectPage.add = true;
+        this.selectPage.name = "新增菜单";
+        this.form.setFieldsValue({
+          'id':"",
+          'parentId':"",
+          'name':"",
+          'type':0,
+          'icon':"",
+          'url':"",
+          'perms':"",
+          'orderNum':""
+        });
       },
       updateMenu(){
         this.axios.put('/sys/menu',{
@@ -132,6 +157,7 @@
         })
       },
       addMenu(){
+
         console.log("addmenu");
       }
     },
